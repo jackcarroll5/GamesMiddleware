@@ -32,11 +32,10 @@ public class BouncingScript : MonoBehaviour
        acceleration = Vector3.down * gravity;
         previousVelocity = velocity;
         velocity += acceleration * Time.deltaTime;
-        transform.position += velocity * Time.deltaTime;    
+        transform.position += velocity * Time.deltaTime;
 
         if (transform.position.y <= floorHeight + radius)
         {
-
 
             transform.position -= velocity * Time.deltaTime;//Undoes the velocity
 
