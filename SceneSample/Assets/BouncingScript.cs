@@ -5,67 +5,59 @@ using UnityEngine;
 
 public class BouncingScript : MonoBehaviour
 {
-    private float floorHeight = 0;
-    private float gravity = 9.8f;
-    private Vector3 velocity;
-    private Vector3 acceleration;
-    private int hasBounce = 10;
+	private float floorHeight = 0;
+	private float gravity = 9.8f;
+	private Vector3 velocity;
+	private Vector3 acceleration;
+	private int hasBounce = 10;
+   
 
-    /*[SerializeField]
-    private int loopBounce = 10;*/
+	private Plane plane;
 
-    [SerializeField]
-    private float coOfRestitution = 0.6f;
+	/*[SerializeField]
+	private int loopBounce = 10;*/
 
-    private float radius;
-    private Vector3 previousVelocity = Vector3.zero;
+	[SerializeField]
+	private float coOfRestitution = 0.6f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	private float radius;
+	private Vector3 previousVelocity = Vector3.zero;
 
-    // Update is called once per frame
-    void Update()
-    {     
-       acceleration = Vector3.down * gravity;
-        previousVelocity = velocity;
-        velocity += acceleration * Time.deltaTime;
-        transform.position += velocity * Time.deltaTime;
+	// Start is called before the first frame update
+	void Start()
+	{
+		plane = FindObjectOfType<Plane>();
+		OnValidate();
+	}
 
-        if (transform.position.y <= floorHeight + radius)
-        {
+	// Update is called once per frame
+	void Update()
+	{     
+	   acceleration = Vector3.down * gravity;
+		previousVelocity = velocity;
+		velocity += acceleration * Time.deltaTime;
+		transform.position += velocity * Time.deltaTime;
 
-            transform.position -= velocity * Time.deltaTime;//Undoes the velocity
+		if (plane.distanceTo(transform.position) < radius)
+		{
+			Vector3 parallel_to_surface = plane.parallellToSurface(velocity);
+			Vector3 perpendicular_to_surface = plane.perpendicularToSurface(velocity);
+			//transform.position -= velocity * Time.deltaTime;//Undoes the velocity
 
-            Debug.Log("Bounce No " + hasBounce);
-           
-            velocity = -velocity; //Perfectly Elastic Velocity
+			Debug.Log("Bounce No " + hasBounce);
 
-            velocity = coOfRestitution * velocity;
+			velocity = parallel_to_surface - perpendicular_to_surface;
 
-            //transform.position -= velocity;
+		  //  velocity = coOfRestitution * velocity;
 
-            hasBounce++;
+			//transform.position -= velocity;
 
-        }
-        
-    }
+			hasBounce++;
+		}      
+	}
 
-    public static Vector3 Parallel(Vector3 v, Vector3 normal)
-    {
-        Vector3 norm = normal.normalized;
-        return Vector3.Dot(v, norm) * norm;
-    }
-
-    public static Vector3 Arp(Vector3 v, Vector3 n)
-    {
-        return v - Parallel(v, n);
-    }
-
-    private void OnValidate()
-    {
-        radius = transform.localScale.y / 2f;
-    }
+	private void OnValidate()
+	{
+		radius = transform.localScale.y / 2f;
+	}
 }
