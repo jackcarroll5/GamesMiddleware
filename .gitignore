@@ -2,6 +2,10 @@
 
 SceneSample/Library/
 
+SceneSample/Library/metadata/
+
+SceneSample/Library/PackageCache/
+
 SceneSample/Temp/
 
 SceneSample/Obj/
