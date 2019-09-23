@@ -7,12 +7,20 @@ public class BouncingScript : MonoBehaviour
 {
 	private float floorHeight = 0;
 	private float gravity = 9.8f;
-	private Vector3 velocity;
+
+	public Vector3 velocity;
+    private Vector3 velocity1;
+
     private Vector3 newVelocity;
 	private Vector3 acceleration;
     private float distance;
 	private int hasBounce = 10;
     private Vector3 normal;
+
+    public float speed;
+    public float mass = 1f;
+    public Vector3 direction;
+
 
 	private Plane plane;
 
@@ -20,13 +28,15 @@ public class BouncingScript : MonoBehaviour
 	private int loopBounce = 10;*/
 
 	[SerializeField]
-	private float coOfRestitution = 0.6f;
+	public float coOfRestitution = 0.6f;
+
 
 	private float radius;
 	private Vector3 previousVelocity = Vector3.zero;
+    Vector3 pt;
 
-	// Start is called before the first frame update
-	void Start()
+    // Start is called before the first frame update
+    void Start()
 	{
 		plane = FindObjectOfType<Plane>();
 		OnValidate();
@@ -73,4 +83,33 @@ public class BouncingScript : MonoBehaviour
 	{
 		radius = transform.localScale.y / 2f;
 	}
+
+    public float distanceTo(Vector3 s)
+    {
+        return Parallel((pt - s), normal).magnitude;
+    }
+
+    public static Vector3 Parallel(Vector3 v, Vector3 n)
+    {
+        Vector3 norm = n.normalized;
+        return Vector3.Dot(v, norm) * norm;
+    }
+
+    public Vector3 getNormal(Vector3 v)
+    {
+        return (v - transform.position).normalized;
+    }
+
+    public bool isColliding(BouncingScript sphere)
+    {
+
+
+        return true;
+    }
+
+    public static void determineCollisionIndex()
+    {
+        
+
+    }
 }

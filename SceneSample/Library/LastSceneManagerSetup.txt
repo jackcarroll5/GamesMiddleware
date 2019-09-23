@@ -1,4 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/BounceSampleScene.unity
+- path: Assets/Scenes/Collision.unity
   isLoaded: 1
   isActive: 1
+  isSubScene: 0
