@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4432236845549147360}
   - component: {fileID: 4432236845549147361}
   - component: {fileID: 4432236845549147422}
-  - component: {fileID: 4432236845549147362}
+  - component: {fileID: 3398804790154730718}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -67,6 +67,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -93,7 +94,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &4432236845549147362
+--- !u!114 &3398804790154730718
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,6 +103,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4432236845549147423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d20c40ffd4f20474eb2f4b1ed3518729, type: 3}
+  m_Script: {fileID: 11500000, guid: fc8c4f6228612844092d9020ab2975c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pt: {x: 0, y: 0, z: 0}

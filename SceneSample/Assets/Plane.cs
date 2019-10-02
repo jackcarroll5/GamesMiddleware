@@ -5,22 +5,28 @@ using UnityEngine;
 
 public class Plane : MonoBehaviour
 {
-	Vector3 pt;
-	Vector3 normal;
+	public Vector3 pt;
+	internal Vector3 normal;
 
    public void placePlane()
 	{
 		transform.position = pt;
 		transform.rotation = Quaternion.LookRotation(transform.forward, normal);
 	}
-	
-	// Start is called before the first frame update
-	void Start()
+
+    public void placePlaneRight()
+    {
+        transform.position = pt;
+        transform.rotation = Quaternion.LookRotation(transform.right, normal);
+    }
+
+    // Start is called before the first frame update
+    void Start()
 	{
 		pt = Vector3.up;
-		normal = new Vector3(4,10,0);
+		normal = new Vector3(1,2,0);
 
-		placePlane();
+        placePlane();
 		
 	}
 
@@ -42,6 +48,8 @@ public class Plane : MonoBehaviour
 		return Vector3.Dot(v, norm) * norm;
 	}
 
+
+
 	public static Vector3 Perp(Vector3 v, Vector3 n)
 	{
 		return v - Parallel(v, n);
@@ -57,4 +65,19 @@ public class Plane : MonoBehaviour
 	{
 		return Parallel(v, normal);
 	}
+
+    public BouncingScript afterCollision(BouncingScript sphere, Vector3 ptOfImpact,
+       Vector3 norm, float coOfRestitution)
+    {
+        Vector3 perpToNormal = Perp(sphere.velocity, norm);
+
+        Vector3 parallelToNormal = Parallel(sphere.velocity, norm);
+
+        Vector3 newVelocity = perpToNormal - coOfRestitution * parallelToNormal;
+
+        BouncingScript output = sphere;
+        output.velocity = newVelocity;
+
+        return output;
+    }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,9 +10,8 @@ public class BouncingScript : MonoBehaviour
 	private float gravity = 9.8f;
 
 	public Vector3 velocity;
-
-
     private Vector3 newVelocity;
+
 	private Vector3 acceleration;
     private float distance;
 	private int hasBounce = 10;
@@ -35,9 +35,16 @@ public class BouncingScript : MonoBehaviour
             transform.localScale = new Vector3(2 * value, 2 * value, 2 * value);
         }
     }
+
     
 	private Vector3 previousVelocity = Vector3.zero;
     Vector3 pt;
+
+    internal bool isColliding(Plane p, ref float dist)
+    {
+        dist = p.distanceTo(transform.position) - radius;
+        return dist < 0;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -52,20 +59,12 @@ public class BouncingScript : MonoBehaviour
 		previousVelocity = velocity;
 		velocity += acceleration * Time.deltaTime;
 		transform.position += velocity * Time.deltaTime;
-
-
     }
 
 	private void OnValidate()
 	{
 		radius = transform.localScale.y / 2f;
 	}
-
-    public static Vector3 Parallel(Vector3 v, Vector3 n)
-    {
-        Vector3 norm = n.normalized;
-        return Vector3.Dot(v, norm) * norm;
-    }
 
     public Vector3 getNormal(Vector3 v)
     {
@@ -74,21 +73,24 @@ public class BouncingScript : MonoBehaviour
 
     public bool isColliding(BouncingScript sphere)
     {
-
-
         return Vector3.Distance(transform.position, sphere.transform.position) < (radius + sphere.radius);
     }
-    public bool isColliding(Plane plane)
+
+    public Vector3 ptOfImpact(BouncingScript sphere)
     {
+        if(!isColliding(sphere))
+        {
+            throw new Exception("No collision");
+        }
 
+        Vector3 dirOfPtOfImpactFromCentre = Vector3.Normalize(sphere.transform.position - transform.position);
 
-        return plane.distanceTo(transform.position) < radius;
+        return transform.position + radius * dirOfPtOfImpactFromCentre;
     }
 
-
-    public static void determineCollisionIndex()
+    public Vector3 normForCollision(BouncingScript sphere)
     {
-        
-
+        return Vector3.Normalize(sphere.transform.position - transform.position);
     }
+
 }
