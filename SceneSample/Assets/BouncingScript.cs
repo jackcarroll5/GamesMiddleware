@@ -23,7 +23,7 @@ public class BouncingScript : MonoBehaviour
 	private int loopBounce = 10;*/
 
 	[SerializeField]
-	public float coOfRestitution = 0.6f;
+	public float coOfRestitution;
 
 
 	public float radius {
@@ -50,6 +50,10 @@ public class BouncingScript : MonoBehaviour
     void Start()
 	{
 		OnValidate();
+
+        radius = mass * UnityEngine.Random.Range(0.1f,0.35f);
+
+        transform.localScale += new Vector3(radius, radius, radius);
 	}
 
 	// Update is called once per frame
@@ -87,6 +91,8 @@ public class BouncingScript : MonoBehaviour
 
         return transform.position + radius * dirOfPtOfImpactFromCentre;
     }
+
+
 
     public Vector3 normForCollision(BouncingScript sphere)
     {

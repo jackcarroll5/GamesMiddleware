@@ -25,6 +25,8 @@ public class Manager : MonoBehaviour
         colours[3] = Color.green;
         colours[4] = Color.magenta;
         colours[5] = Color.black;
+      
+
     }
 
     void spawningNewBalls()
@@ -48,25 +50,28 @@ public class Manager : MonoBehaviour
 	// Update is called once per frame
 	private void Update()
 	{
-
-		for (int i = 0; i < allSpheres.Length; i++)
+        for (int i = 0; i < allSpheres.Length; i++)
 		{
-		   BouncingScript spheres = allSpheres[i];
-        
-			foreach (Plane p in allPlanes)
+		   BouncingScript spheres = allSpheres[i];        
+
+            foreach (Plane p in allPlanes)
             {
                 float dist = 0;
 
-                if (Input.GetMouseButton(0))
-                {
-                    spawningNewBalls();
-                }
-
                 if (spheres.isColliding(p, ref dist))
 				{
-                    Debug.Log("Collision occurs between Sphere " + spheres + "and Plane " + p);
+                    if (Input.GetMouseButton(0))
+                    {
+                        spawningNewBalls();
+                    }
 
-                   spheres.GetComponent<Renderer>().material.color = colours[Random.Range(0, colours.Length)];
+                    if (p.transform.tag == "Plane")
+                    {
+                        
+
+                        Debug.Log("Collision occurs between Sphere " + spheres + "and Plane " + p);
+
+                        spheres.GetComponent<Renderer>().material.color = colours[Random.Range(0, colours.Length)];
 
                     Vector3 parallel_to_surface = p.parallellToSurface(spheres.velocity);
                     Vector3 perpendicular_to_surface = p.perpendicularToSurface(spheres.velocity);
@@ -77,18 +82,21 @@ public class Manager : MonoBehaviour
                     spheres.velocity = parallel_to_surface - perpendicular_to_surface;
 
                     Vector3 norm = spheres.getNormal(transform.position);
-                    Debug.Log("Normal when colliding with plane is: " + norm);
+                    Debug.Log("Normal when colliding with plane for the " + spheres + " is: " + norm);
 
                     Vector3 poi = spheres.ptOfImpact(spheres);
-                    Debug.Log("Point of Impact when colliding with the plane is: " + poi);
+                    Debug.Log("Point of Impact for the " + spheres + " when colliding with the plane is: " + poi);
 
                     BouncingScript aftermath = p.afterCollision(spheres, poi, norm, 0.6f);
 
 
-                   
+                    Debug.Log("After Collision - Coefficient of Restitution for the " + spheres + " is: " + aftermath.coOfRestitution + "\nMass of Sphere: " + aftermath.mass + "\nRadius is: " + aftermath.radius);
                 }
 
-			}
+              }
+
+            }
+
             if (i < allSpheres.Length - 1)
             { 
                 for (int j = i + 1; j < allSpheres.Length; j++)
@@ -103,18 +111,16 @@ public class Manager : MonoBehaviour
                             spawningNewBalls();
                         }
 
-                  
-
-                        Debug.Log("Collision occurs between Sphere " + spheres + "and Sphere " + sphere1);
+                        Debug.Log("Ball collision occurs between Sphere " + spheres + "and Sphere " + sphere1);
 
                         Vector3 normal = spheres.normForCollision(sphere1);
-                       // Debug.Log("Normal for collision of spheres is: " + normal);
+                        Debug.Log("Normal for collision of sphere of " + spheres +  "is: " + normal);
 
                       Vector3 norm = spheres.getNormal(sphere1.transform.position);
-                        Debug.Log("Normal of spheres is: " + norm);
+                        Debug.Log("Normal of sphere for the " + spheres +  " is: " + norm);
 
                         Vector3 poi = spheres.ptOfImpact(sphere1);
-                        Debug.Log("Point of Impact of the spheres is: " + poi);
+                        Debug.Log("Point of Impact of the sphere for the " + spheres +  " is: " + poi);
 
 
                         var s1VelocityParallel = Plane.Parallel(spheres.velocity, norm);

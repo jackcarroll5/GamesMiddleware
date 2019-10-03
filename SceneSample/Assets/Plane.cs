@@ -6,7 +6,7 @@ using UnityEngine;
 public class Plane : MonoBehaviour
 {
 	public Vector3 pt;
-	internal Vector3 normal;
+	public Vector3 normal;
 
    public void placePlane()
 	{
@@ -24,7 +24,9 @@ public class Plane : MonoBehaviour
     void Start()
 	{
 		pt = Vector3.up;
-		normal = new Vector3(1,2,0);
+		normal = new Vector3(pt.x,pt.y,pt.z);
+
+        transform.position = new Vector3(10,10,10);
 
         placePlane();
 		
@@ -80,4 +82,5 @@ public class Plane : MonoBehaviour
 
         return output;
     }
+
 }
