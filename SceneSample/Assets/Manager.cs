@@ -60,20 +60,19 @@ public class Manager : MonoBehaviour
 
                 if (spheres.isColliding(p, ref dist))
 				{
-                    if (Input.GetMouseButton(0))
-                    {
-                        spawningNewBalls();
-                    }
-
                     if (p.transform.tag == "Plane")
                     {
                         
-
                         Debug.Log("Collision occurs between Sphere " + spheres + "and Plane " + p);
 
                         spheres.GetComponent<Renderer>().material.color = colours[Random.Range(0, colours.Length)];
 
-                    Vector3 parallel_to_surface = p.parallellToSurface(spheres.velocity);
+                        if (Input.GetMouseButtonDown(0))
+                        {
+                            spawningNewBalls();
+                        }
+
+                        Vector3 parallel_to_surface = p.parallellToSurface(spheres.velocity);
                     Vector3 perpendicular_to_surface = p.perpendicularToSurface(spheres.velocity);
                     spheres.transform.position -= dist * p.normal;
 
@@ -91,6 +90,11 @@ public class Manager : MonoBehaviour
 
 
                     Debug.Log("After Collision - Coefficient of Restitution for the " + spheres + " is: " + aftermath.coOfRestitution + "\nMass of Sphere: " + aftermath.mass + "\nRadius is: " + aftermath.radius);
+
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        spawningNewBalls();
+                    }
                 }
 
               }
@@ -106,43 +110,47 @@ public class Manager : MonoBehaviour
 
                     if (spheres.isColliding(sphere1))
                     {
-                        if (Input.GetMouseButton(0))
+
+                        if (spheres.transform.tag == "Sphere")
                         {
-                            spawningNewBalls();
+                            if (Input.GetMouseButton(0))
+                            {
+                                spawningNewBalls();
+                            }
+
+                            Debug.Log("Ball collision occurs between Sphere " + spheres + "and Sphere " + sphere1);
+
+                            Vector3 normal = spheres.normForCollision(sphere1);
+                            Debug.Log("Normal for collision of sphere of " + spheres + "is: " + normal);
+
+                            Vector3 norm = spheres.getNormal(sphere1.transform.position);
+                            Debug.Log("Normal of sphere for the " + spheres + " is: " + norm);
+
+                            Vector3 poi = spheres.ptOfImpact(sphere1);
+                            Debug.Log("Point of Impact of the sphere for the " + spheres + " is: " + poi);
+
+
+                            var s1VelocityParallel = Plane.Parallel(spheres.velocity, norm);
+
+                            var s1VelocityPerp = Plane.Perp(spheres.velocity, norm);
+
+                            var s2VelocityParallel = Plane.Parallel(sphere1.velocity, norm);
+                            var s2VelocityPerp = Plane.Perp(sphere1.velocity, norm);
+
+
+                            var mass = spheres.mass;
+                            var mass1 = sphere1.mass;
+
+
+                            var v1 = (((0 - mass1) / (0 + mass1)) * s2VelocityParallel) + (((2 * mass1) / (0 + mass1) * s1VelocityParallel));
+                            var v2 = (((mass - mass1) / (mass + mass1)) * s2VelocityParallel) + (((2 * mass1) / (mass + mass1) * s1VelocityParallel));
+
+                            spheres.velocity = v1 * spheres.coOfRestitution + s1VelocityPerp;
+                            sphere1.velocity = v2 * sphere1.coOfRestitution + s2VelocityPerp;
+
+
+                            spheres.transform.localScale += new Vector3(0.001f, 0.001f, 0.001f);
                         }
-
-                        Debug.Log("Ball collision occurs between Sphere " + spheres + "and Sphere " + sphere1);
-
-                        Vector3 normal = spheres.normForCollision(sphere1);
-                        Debug.Log("Normal for collision of sphere of " + spheres +  "is: " + normal);
-
-                      Vector3 norm = spheres.getNormal(sphere1.transform.position);
-                        Debug.Log("Normal of sphere for the " + spheres +  " is: " + norm);
-
-                        Vector3 poi = spheres.ptOfImpact(sphere1);
-                        Debug.Log("Point of Impact of the sphere for the " + spheres +  " is: " + poi);
-
-
-                        var s1VelocityParallel = Plane.Parallel(spheres.velocity, norm);
-
-                        var s1VelocityPerp = Plane.Perp(spheres.velocity, norm);
-
-                        var s2VelocityParallel = Plane.Parallel(sphere1.velocity, norm);
-                        var s2VelocityPerp = Plane.Perp(sphere1.velocity, norm);
-
-
-                        var mass = spheres.mass;
-                        var mass1 = sphere1.mass;
-
-
-                        var v1 = (((0 - mass1) / (0 + mass1)) * s2VelocityParallel) + (((2 * mass1) / (0 + mass1) * s1VelocityParallel));
-                        var v2 = (((mass - mass1) / (mass + mass1)) * s2VelocityParallel) + (((2 * mass1) / (mass + mass1) * s1VelocityParallel));
-
-                        spheres.velocity = v1 * spheres.coOfRestitution + s1VelocityPerp;
-                        sphere1.velocity = v2 * sphere1.coOfRestitution + s2VelocityPerp;
-
-
-                        spheres.transform.localScale += new Vector3(0.001f, 0.001f, 0.001f);
                     }
 
                 }
