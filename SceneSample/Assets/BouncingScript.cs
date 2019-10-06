@@ -103,7 +103,7 @@ public class BouncingScript : MonoBehaviour
         Debug.Log("Speed: " + speed);
 
         var direction = Vector3.Reflect(previousVelocity.normalized, colNormal);
-        Debug.Log("Out Direction: " + direction);
+        Debug.Log("Direction Out: " + direction);
 
         velocity = direction * Mathf.Max(speed, minimumVelocity);
         Debug.Log("Velocity: " + velocity);
