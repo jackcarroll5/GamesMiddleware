@@ -67,7 +67,7 @@ public class Manager : MonoBehaviour
 
                         spheres.GetComponent<Renderer>().material.color = colours[Random.Range(0, colours.Length)];
 
-                        if (Input.GetMouseButtonDown(0))
+                        if (Input.GetMouseButton(0))
                         {
                             spawningNewBalls();
                         }
@@ -91,7 +91,7 @@ public class Manager : MonoBehaviour
 
                     Debug.Log("After Collision - Coefficient of Restitution for the " + spheres + " is: " + aftermath.coOfRestitution + "\nMass of Sphere: " + aftermath.mass + "\nRadius is: " + aftermath.radius);
 
-                    if (Input.GetMouseButtonDown(0))
+                    if (Input.GetMouseButton(0))
                     {
                         spawningNewBalls();
                     }
@@ -119,6 +119,8 @@ public class Manager : MonoBehaviour
                             }
 
                             Debug.Log("Ball collision occurs between Sphere " + spheres + "and Sphere " + sphere1);
+
+                            spheres.Bouncer(spheres.velocity);
 
                             Vector3 normal = spheres.normForCollision(sphere1);
                             Debug.Log("Normal for collision of sphere of " + spheres + "is: " + normal);

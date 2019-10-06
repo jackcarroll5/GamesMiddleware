@@ -6,15 +6,24 @@ using UnityEngine;
 
 public class BouncingScript : MonoBehaviour
 {
-	private float floorHeight = 0;
+
 	private float gravity = 9.8f;
 
 	public Vector3 velocity;
     private Vector3 newVelocity;
 
-	private Vector3 acceleration;
+    [SerializeField]
+    private Vector3 initVelocity;
+
+    [SerializeField]
+    private float minimumVelocity = 11f;
+
+    private Vector3 acceleration;
     private float distance;
-	private int hasBounce = 10;
+    private float speed;
+    private float time;
+
+    private Vector3 lastFrameVel;
 
 
     public float mass = 1f;
@@ -63,9 +72,16 @@ public class BouncingScript : MonoBehaviour
 		previousVelocity = velocity;
 		velocity += acceleration * Time.deltaTime;
 		transform.position += velocity * Time.deltaTime;
+
+
     }
 
-	private void OnValidate()
+    private void OnEnable()
+    {
+        velocity = initVelocity;
+    }
+
+    private void OnValidate()
 	{
 		radius = transform.localScale.y / 2f;
 	}
@@ -78,6 +94,28 @@ public class BouncingScript : MonoBehaviour
     public bool isColliding(BouncingScript sphere)
     {
         return Vector3.Distance(transform.position, sphere.transform.position) < (radius + sphere.radius);
+    }
+
+
+    public void Bouncer(Vector3 colNormal)
+    {
+        var speed = previousVelocity.magnitude;
+        Debug.Log("Speed: " + speed);
+
+        var direction = Vector3.Reflect(previousVelocity.normalized, colNormal);
+        Debug.Log("Out Direction: " + direction);
+
+        velocity = direction * Mathf.Max(speed, minimumVelocity);
+        Debug.Log("Velocity: " + velocity);
+
+        float time = Time.deltaTime;
+
+        distance = speed * time;
+        Debug.Log("Distance: " + distance);
+
+        time = distance / speed;
+        Debug.Log("Time Of Impact Simplified: " + time);
+
     }
 
     public Vector3 ptOfImpact(BouncingScript sphere)
