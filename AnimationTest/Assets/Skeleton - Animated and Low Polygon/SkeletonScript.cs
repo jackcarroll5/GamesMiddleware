@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿
+using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class SkeletonScript : MonoBehaviour
 {
@@ -9,44 +9,82 @@ public class SkeletonScript : MonoBehaviour
     private Rigidbody _rigidBody;
     public float jumpingForce = 300f;
     public float groundDistance = 0.2f;
+    private Transform leftHandObj;
+    
     float moveSpeedMultiplier = 1f;
     float runCycleLegOffset = 0.2f;
     private const float KHalf = 0.5f;
-    float forwardAmount;
+   public float forwardAmount;
     Vector3 _groundNormal;
     private Vector3 _move;
-    float movingTurnSpeed = 90;
-    float stationaryTurnSpeed = 180;
+    readonly float movingTurnSpeed = 45;
+    readonly float stationaryTurnSpeed = 180;
     public LayerMask whatGround;
+    
     private static readonly int Speed = Animator.StringToHash("Speed");
     private static readonly int TurnSpeed = Animator.StringToHash("TurnSpeed");
     private static readonly int Jump = Animator.StringToHash("Jump");
     private static readonly int Grounded = Animator.StringToHash("Grounded");
     private static readonly int Attacker = Animator.StringToHash("Attacker");
     private static readonly int SwingHard = Animator.StringToHash("SwingHard");
-
-    public Transform chest;
-    public Transform head;
-    public Transform cubeTarget;
-    public Vector3 Offset;
+    
+    Transform _head;
+    private Transform _chest;
+    public Transform target;
+    public Vector3 offset; 
+    public Quaternion initRotation; 
+    public Quaternion targetRot;
+    
+    [Range(0.0f,1.0f)]
+    float timeValue = 0.5f;
     
     // Start is called before the first frame update
     void Start()
     {
         _thisAnimation = GetComponent<Animator>();
         _rigidBody = GetComponent<Rigidbody>();
+      
         
-       chest = _thisAnimation.GetBoneTransform(HumanBodyBones.Chest);
-       head = _thisAnimation.GetBoneTransform((HumanBodyBones.Head));
+
+        //initRotation = head.rotation;
+       //head.LookAt(target.position);
+       //targetRot = head.rotation;
     }
 
     private void LateUpdate()
     {
+       // var position = target.position;
+       // head.LookAt(position);
 
-
+       // var rotation = head.rotation;
+       // rotation = rotation * Quaternion.Euler(offset);
+       // rotation = Quaternion.Lerp( initRotation , _targetRot , timeValue);
+       // _head.rotation = rotation;
        
+        
+       //Quaternion lookRotate = Quaternion.LookRotation((position - _head.position));
+        //_head.rotation = lookRotate * initRotation;
+        
+        OnAnimatorIK(0);
     }
-    
+
+    private void OnAnimatorIK(int layerIndex)
+    {
+        _head = _thisAnimation.GetBoneTransform(HumanBodyBones.Head);
+        
+        var position = target.transform.position;
+        
+        _thisAnimation.SetLookAtPosition(position);
+        
+        _thisAnimation.SetBoneLocalRotation(HumanBodyBones.Head,Quaternion.Euler(position));
+        
+        //float distance = Vector3.Distance( _thisAnimation.GetBoneTransform(HumanBodyBones.Head).position, position);
+        
+        _thisAnimation.SetLookAtWeight(1.0f);
+     
+       // _thisAnimation.SetIKRotation(AvatarIKGoal.LeftHand,leftHandObj.rotation);
+    }
+
     public void OnAnimatorMove()
     {
         // we implement this function to override the default root motion.
@@ -66,9 +104,14 @@ public class SkeletonScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        target = GameObject.FindGameObjectWithTag("Target").transform;
+        Debug.Log(target.name); 
+        
         var vert = Input.GetAxis("Vertical");
         _thisAnimation.SetFloat(Speed, vert);
-        transform.position += transform.forward * vert * 0.3f;
+        
+        var transform1 = transform;
+        transform1.position += 0.3f * vert * transform1.forward;
         
         var horizontal = Input.GetAxis("Horizontal");
         _thisAnimation.SetFloat(TurnSpeed, horizontal);
@@ -94,6 +137,8 @@ public class SkeletonScript : MonoBehaviour
         {
             _thisAnimation.SetBool(Grounded, false);
         }
+
+       
         
         float runCycle =
             Mathf.Repeat(
