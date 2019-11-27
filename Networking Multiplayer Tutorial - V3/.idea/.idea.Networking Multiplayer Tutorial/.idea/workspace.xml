@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="88bfc3ea-db1f-49e5-93eb-e47cbd0ec751" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CD14385-55E6-4C0E-AEDA-2393D3C9CF4A/6c/b7644c4d/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/Pun Tutorial Part 6/Pun Tutorial Part 6/Assets/Player/NameLabel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CD14385-55E6-4C0E-AEDA-2393D3C9CF4A/61/2a1b270e/InvokableCall.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HUD/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/PlayerScore.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CD14385-55E6-4C0E-AEDA-2393D3C9CF4A/69/72f170a5/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Scripts/Game/AsteroidsGameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameMan.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Photon/PhotonChat/Demos/DemoChat/ChatAppIdCheckerUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Scripts/Lobby/LobbyMainPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/SpawnPoints/SpawnPts.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Photon/PhotonChat/Demos/DemoChat/ChatGui.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Extensions/TransformExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Extensions/Vec3Extensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/PlayerShoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CD14385-55E6-4C0E-AEDA-2393D3C9CF4A/3c/b9491c61/Debug.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/NameLabel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/StandaloneInputModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/CanvasScaler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/TankExploder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HUD/GameGUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HUD/HUD.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/Missile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/HealthBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/Billboard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetwork.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetwork.cs" />
+        <option value="$PROJECT_DIR$/Assets/HUD/HUD.cs" />
+        <option value="$PROJECT_DIR$/Assets/ExtensionsTransform.cs" />
+        <option value="$PROJECT_DIR$/Assets/Extensions/TransformExtensions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Player/SpawnPoints/SpawnPts.cs" />
+        <option value="$PROJECT_DIR$/Assets/Player/Billboard.cs" />
+        <option value="$PROJECT_DIR$/Assets/Player/HealthBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Extensions/Vec3Extensions.cs" />
+        <option value="$PROJECT_DIR$/Assets/HUD/GameGUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Player/PlayerScore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Player/NameLabel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Player/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Player/PlayerHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Player/Missile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Player/PlayerShoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameMan.cs" />
+        <option value="$PROJECT_DIR$/Assets/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/HUD/MainMenu.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1TSxClBBWeAvymjnPyapwrdCmX1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="10288">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" value="10288" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="88bfc3ea-db1f-49e5-93eb-e47cbd0ec751" name="Default Changelist" comment="" />
+      <created>1573467203944</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573467203944</updated>
+      <workItem from="1573467274906" duration="747000" />
+      <workItem from="1573468527720" duration="13281000" />
+      <workItem from="1573595981029" duration="9207000" />
+      <workItem from="1573662415233" duration="1678000" />
+      <workItem from="1573665653198" duration="3058000" />
+      <workItem from="1573685120965" duration="17000" />
+      <workItem from="1573999301516" duration="8702000" />
+      <workItem from="1574071828829" duration="3494000" />
+      <workItem from="1574119469994" duration="3382000" />
+      <workItem from="1574190196765" duration="979000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="WindowStateProjectService">
+    <state width="385" height="466" key="DebuggerActiveHint" timestamp="1574007002888">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="385" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1574007002888" />
+    <state width="1070" height="223" key="GridCell.Tab.0.bottom" timestamp="1574012831446">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1070" height="223" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1574012831446" />
+    <state width="1070" height="223" key="GridCell.Tab.0.center" timestamp="1574012831446">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1070" height="223" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1574012831446" />
+    <state width="1070" height="223" key="GridCell.Tab.0.left" timestamp="1574012831446">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1070" height="223" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1574012831446" />
+    <state width="1070" height="223" key="GridCell.Tab.0.right" timestamp="1574012831446">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1070" height="223" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1574012831446" />
+    <state width="1070" height="223" key="GridCell.Tab.1.bottom" timestamp="1574012831447">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1070" height="223" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1574012831447" />
+    <state width="1070" height="223" key="GridCell.Tab.1.center" timestamp="1574012831447">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1070" height="223" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1574012831447" />
+    <state width="1070" height="223" key="GridCell.Tab.1.left" timestamp="1574012831447">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1070" height="223" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1574012831447" />
+    <state width="1070" height="223" key="GridCell.Tab.1.right" timestamp="1574012831447">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1070" height="223" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1574012831447" />
+    <state width="1070" height="223" key="GridCell.Tab.2.bottom" timestamp="1574012831448">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1070" height="223" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1574012831448" />
+    <state width="1070" height="223" key="GridCell.Tab.2.center" timestamp="1574012831447">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1070" height="223" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1574012831447" />
+    <state width="1070" height="223" key="GridCell.Tab.2.left" timestamp="1574012831447">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1070" height="223" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1574012831447" />
+    <state width="1070" height="223" key="GridCell.Tab.2.right" timestamp="1574012831448">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1070" height="223" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1574012831448" />
+    <state width="1070" height="223" key="GridCell.Tab.3.bottom" timestamp="1574012831449">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1070" height="223" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1574012831449" />
+    <state width="1070" height="223" key="GridCell.Tab.3.center" timestamp="1574012831448">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1070" height="223" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1574012831448" />
+    <state width="1070" height="223" key="GridCell.Tab.3.left" timestamp="1574012831448">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1070" height="223" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1574012831448" />
+    <state width="1070" height="223" key="GridCell.Tab.3.right" timestamp="1574012831448">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1070" height="223" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1574012831448" />
+    <state x="698" y="168" key="IDE.errors.dialog" timestamp="1573469196657">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="698" y="168" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1573469196657" />
+    <state x="790" y="148" key="RiderGenerateDialog" timestamp="1573468034224">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="790" y="148" key="RiderGenerateDialog/0.0.1536.824@0.0.1536.824" timestamp="1573468034224" />
+    <state x="560" y="187" key="run.anything.popup" timestamp="1574004318286">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="560" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1574004318286" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameMan.cs</url>
+          <line>79</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/GameMan.cs" initialLine="77">
+            <startOffsets>
+              <option value="1930" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1962" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

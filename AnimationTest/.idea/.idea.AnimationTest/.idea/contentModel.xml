@@ -12,6 +12,9 @@
         <e p="Skeleton - Animated and Low Polygon" t="Include">
           <e p="SkeletonScript.cs" t="Include" />
         </e>
+        <e p="StaffOfPain" t="Include">
+          <e p="readme_first.txt" t="Include" />
+        </e>
         <e p="Standard Assets" t="Include">
           <e p="2D" t="Include">
             <e p="Scripts" t="Include">
