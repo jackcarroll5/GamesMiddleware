@@ -57,8 +57,13 @@ public class GameMan : MonoBehaviourPunCallbacks
         
         var spawnPoint = GetRandomSpawnPoint();
  
-        localPlayer = PhotonNetwork.Instantiate(
+        /*localPlayer = PhotonNetwork.Instantiate(
             "Player",
+            spawnPoint.position,
+            spawnPoint.rotation, 0);*/
+
+            localPlayer = PhotonNetwork.Instantiate(
+            "skeleton_animated Variant",
             spawnPoint.position,
             spawnPoint.rotation, 0);
     }
@@ -93,7 +98,8 @@ public class GameMan : MonoBehaviourPunCallbacks
         while (spawnPoints.Count > 0)
         {
             var spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
-            var mask = LayerMask.GetMask("Player");
+            //var mask = LayerMask.GetMask("Player");
+             var mask = LayerMask.GetMask("skeleton_animated Variant");
             Collider[] hitColliders = Physics.OverlapSphere(spawnPoint.transform.position, 2, mask);
             if (hitColliders.Length == 0)
             {

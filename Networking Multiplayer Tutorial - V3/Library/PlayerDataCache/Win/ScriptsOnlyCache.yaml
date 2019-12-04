@@ -1,11 +1,6 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-firstpass.dll:
-    - UnityStandardAssets.ImageEffects.Bloom
-    - UnityStandardAssets.ImageEffects.ColorCorrectionCurves
-    - UnityStandardAssets.ImageEffects.VignetteAndChromaticAberration
     Assembly-CSharp.dll:
-    - Billboard
     - GameGUI
     - GameMan
     - HUD
@@ -15,9 +10,9 @@ ScriptsOnlyBuild:
     - PUNTutorial.HealthBar
     - PUNTutorial.PlayerHealth
     - Player
-    - PlayerMovement
     - PlayerScore
     - PlayerShoot
+    - SkeletonScript
     - SpawnPts
     - TankExploder
     PhotonUnityNetworking.Demos.dll:
@@ -39,8 +34,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.PhotonTransformView
     - Photon.Pun.PhotonView
     - Photon.Pun.ServerSettings
-    Unity.Rider.Editor.dll:
-    - Packages.Rider.Editor.RiderScriptEditorData
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_InputField
@@ -103,11 +96,11 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 10586}
+      Script: {instanceID: 10608}
     - Class: 114
-      Script: {instanceID: 10892}
+      Script: {instanceID: 10950}
     - Class: 114
-      Script: {instanceID: 12072}
+      Script: {instanceID: 12182}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -155,8 +148,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
-    - Class: 92
-      Script: {instanceID: 0}
     - Class: 95
       Script: {instanceID: 0}
     - Class: 104
@@ -168,97 +159,89 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9832}
     - Class: 114
-      Script: {instanceID: 9868}
+      Script: {instanceID: 9992}
     - Class: 114
-      Script: {instanceID: 9986}
-    - Class: 114
-      Script: {instanceID: 10008}
-    - Class: 114
-      Script: {instanceID: 10028}
-    - Class: 114
-      Script: {instanceID: 10044}
+      Script: {instanceID: 10014}
     - Class: 114
       Script: {instanceID: 10052}
     - Class: 114
-      Script: {instanceID: 10070}
+      Script: {instanceID: 10060}
     - Class: 114
-      Script: {instanceID: 10092}
+      Script: {instanceID: 10110}
     - Class: 114
-      Script: {instanceID: 10100}
+      Script: {instanceID: 10112}
     - Class: 114
-      Script: {instanceID: 10102}
+      Script: {instanceID: 10134}
     - Class: 114
-      Script: {instanceID: 10124}
+      Script: {instanceID: 10348}
     - Class: 114
-      Script: {instanceID: 10332}
+      Script: {instanceID: 10372}
     - Class: 114
-      Script: {instanceID: 10356}
+      Script: {instanceID: 10466}
     - Class: 114
-      Script: {instanceID: 10424}
+      Script: {instanceID: 10472}
     - Class: 114
-      Script: {instanceID: 10446}
+      Script: {instanceID: 10524}
     - Class: 114
-      Script: {instanceID: 10452}
+      Script: {instanceID: 10570}
     - Class: 114
-      Script: {instanceID: 10504}
-    - Class: 114
-      Script: {instanceID: 10550}
-    - Class: 114
-      Script: {instanceID: 10586}
-    - Class: 114
-      Script: {instanceID: 10594}
+      Script: {instanceID: 10608}
     - Class: 114
       Script: {instanceID: 10618}
     - Class: 114
-      Script: {instanceID: 10632}
+      Script: {instanceID: 10646}
     - Class: 114
-      Script: {instanceID: 10656}
+      Script: {instanceID: 10660}
     - Class: 114
-      Script: {instanceID: 10698}
+      Script: {instanceID: 10684}
     - Class: 114
-      Script: {instanceID: 10848}
+      Script: {instanceID: 10728}
     - Class: 114
-      Script: {instanceID: 10916}
+      Script: {instanceID: 10902}
     - Class: 114
-      Script: {instanceID: 11034}
+      Script: {instanceID: 10976}
     - Class: 114
-      Script: {instanceID: 11088}
+      Script: {instanceID: 11098}
     - Class: 114
-      Script: {instanceID: 11178}
+      Script: {instanceID: 11154}
     - Class: 114
-      Script: {instanceID: 11256}
+      Script: {instanceID: 11246}
     - Class: 114
-      Script: {instanceID: 11266}
+      Script: {instanceID: 11330}
     - Class: 114
-      Script: {instanceID: 11312}
+      Script: {instanceID: 11340}
     - Class: 114
-      Script: {instanceID: 11328}
+      Script: {instanceID: 11386}
     - Class: 114
-      Script: {instanceID: 11476}
+      Script: {instanceID: 11404}
     - Class: 114
-      Script: {instanceID: 11486}
+      Script: {instanceID: 11562}
     - Class: 114
-      Script: {instanceID: 11492}
+      Script: {instanceID: 11574}
     - Class: 114
-      Script: {instanceID: 11542}
+      Script: {instanceID: 11580}
     - Class: 114
-      Script: {instanceID: 11626}
+      Script: {instanceID: 11630}
     - Class: 114
-      Script: {instanceID: 11672}
+      Script: {instanceID: 11716}
     - Class: 114
-      Script: {instanceID: 11774}
+      Script: {instanceID: 11756}
     - Class: 114
-      Script: {instanceID: 11816}
+      Script: {instanceID: 11766}
     - Class: 114
-      Script: {instanceID: 11992}
+      Script: {instanceID: 11874}
     - Class: 114
-      Script: {instanceID: 12072}
+      Script: {instanceID: 11916}
     - Class: 114
-      Script: {instanceID: 12106}
+      Script: {instanceID: 12098}
     - Class: 114
-      Script: {instanceID: 12114}
+      Script: {instanceID: 12182}
     - Class: 114
-      Script: {instanceID: 12162}
+      Script: {instanceID: 12218}
+    - Class: 114
+      Script: {instanceID: 12226}
+    - Class: 114
+      Script: {instanceID: 12278}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -281,6 +264,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
+    - Class: 215
+      Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
     - Class: 223
@@ -288,12 +273,6 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 225
-      Script: {instanceID: 0}
-    - Class: 241
-      Script: {instanceID: 0}
-    - Class: 243
-      Script: {instanceID: 0}
-    - Class: 245
       Script: {instanceID: 0}
     - Class: 258
       Script: {instanceID: 0}
@@ -420,6 +399,18 @@ ScriptsOnlyBuild:
     className: BlurOptimized
   - hash:
       serializedVersion: 2
+      Hash: 0d85f4fda1e0e70cd92c084d12f05cdc
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Characters.ThirdPerson
+    className: AICharacterControl
+  - hash:
+      serializedVersion: 2
+      Hash: be8b29ecd05b56bbfb5cc0e39b16c11b
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Characters.FirstPerson
+    className: FirstPersonController
+  - hash:
+      serializedVersion: 2
       Hash: 74c875e0f15c48e0a55f06093aa93e15
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -496,6 +487,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: ButtonInsideScrollList
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: 
+    className: EventSystemChecker
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -576,6 +573,12 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
+      Hash: 352455aaadb8c98ff36ead557753abfa
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.CrossPlatformInput
+    className: TiltInput
+  - hash:
+      serializedVersion: 2
       Hash: b1f26da3046d8b188758169a9d6b1078
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.SlotRacer.Utils
@@ -610,6 +613,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Complete
     className: CameraControl
+  - hash:
+      serializedVersion: 2
+      Hash: 1731d95cc8dce262956d345535456351
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Cameras
+    className: AutoCam
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -688,6 +697,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.dll
     namespaceName: Photon.Pun
     className: PhotonHandler
+  - hash:
+      serializedVersion: 2
+      Hash: e540a01426f9ad59088593bf72bcd255
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Utility
+    className: TimedObjectActivator
   - hash:
       serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
@@ -774,6 +789,18 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 385666d964b0eabb4136cbb95125e502
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Cameras
+    className: ProtectCameraFromWallClip
+  - hash:
+      serializedVersion: 2
+      Hash: 303da015e9d1de9fdb27bbc2ba279ebd
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Utility
+    className: WaypointProgressTracker
+  - hash:
+      serializedVersion: 2
       Hash: 68d19b3d89beee491fa2181f4c23ac17
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -858,10 +885,22 @@ ScriptsOnlyBuild:
     className: PunCockpitEmbed
   - hash:
       serializedVersion: 2
+      Hash: db1f205a8c9dae1c39098cd23fc97f63
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Utility
+    className: ParticleSystemDestroyer
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: EventSystem
+  - hash:
+      serializedVersion: 2
+      Hash: 22c018dd8fa228e66d586ea6215449b3
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Utility
+    className: SimpleMouseRotator
   - hash:
       serializedVersion: 2
       Hash: 122d7ffab68b4eedc72a1fce03e63c2f
@@ -886,6 +925,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit.Forms
     className: CreateRoomUiForm
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Utility
+    className: DragRigidbody
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -930,6 +975,12 @@ ScriptsOnlyBuild:
     className: PlayerControl
   - hash:
       serializedVersion: 2
+      Hash: a8b6c919b2049fcc280823488144371f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.CrossPlatformInput
+    className: Joystick
+  - hash:
+      serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -948,6 +999,18 @@ ScriptsOnlyBuild:
     className: Missile
   - hash:
       serializedVersion: 2
+      Hash: 4f631fd718256a8c69483c396671a274
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Utility
+    className: PlatformSpecificContent
+  - hash:
+      serializedVersion: 2
+      Hash: 5e8a01a14cef8c5fb6866e39e13545df
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Characters.ThirdPerson
+    className: ThirdPersonCharacter
+  - hash:
+      serializedVersion: 2
       Hash: f941c3a384168571b7d90f58ec4986bc
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -960,6 +1023,30 @@ ScriptsOnlyBuild:
     className: CurrentRoomIsOpenToggle
   - hash:
       serializedVersion: 2
+      Hash: 0574135745ea880aa1c1be2f2057ab89
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Utility
+    className: ActivateTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: 4bd1cc3c85989d2213a9a8fd9d09e63f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.CrossPlatformInput
+    className: InputAxisScrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: fdd7177da17032ba94d98037cc97bb49
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.CrossPlatformInput
+    className: AxisTouchButton
+  - hash:
+      serializedVersion: 2
+      Hash: dc0c855440d59a516315a62ef55d7fd8
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets._2D
+    className: CameraFollow
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -970,6 +1057,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Photon.Chat.UtilityScripts
     className: EventSystemSpawner
+  - hash:
+      serializedVersion: 2
+      Hash: f03168bb2f3505e6cc0ba61aff5d31ab
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Cameras
+    className: LookatTarget
   - hash:
       serializedVersion: 2
       Hash: 3a3324b73792dde0ff97dae69b3a3dfb
@@ -990,10 +1083,22 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
+      Hash: c88c4199b288356ec3eb2f0d85abc619
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.CrossPlatformInput
+    className: ButtonHandler
+  - hash:
+      serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: CloudRegionProperty
+  - hash:
+      serializedVersion: 2
+      Hash: 0e0c7e6c34f2d19ba95cf463e39888b1
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Characters.FirstPerson
+    className: HeadBob
   - hash:
       serializedVersion: 2
       Hash: ee84478990d29c6d64a8d3003b44725c
@@ -1006,6 +1111,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Characters.ThirdPerson
+    className: ThirdPersonUserControl
+  - hash:
+      serializedVersion: 2
+      Hash: a4d879eed97e8d86fd752672fc026fa2
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Utility
+    className: AutoMoveAndRotate
   - hash:
       serializedVersion: 2
       Hash: 7602c8d40ade510f4c0e781c7062b246
@@ -1024,6 +1141,18 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.dll
     namespaceName: Photon.Pun
     className: PhotonRigidbodyView
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: 
+    className: ForcedReset
+  - hash:
+      serializedVersion: 2
+      Hash: f8bd7a92bf9f22d289759689ae7b1fd4
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Utility
+    className: SmoothFollow
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1098,6 +1227,12 @@ ScriptsOnlyBuild:
     className: CurrentRoomPropertiesListedInLobbyProperty
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.CrossPlatformInput
+    className: MobileControlRig
+  - hash:
+      serializedVersion: 2
       Hash: d329540117e6b6c523bded68046af505
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1120,6 +1255,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: RemoteTestResultSender
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Utility
+    className: ObjectResetter
   - hash:
       serializedVersion: 2
       Hash: a8a4fba96bef6fccf7bb4be2f06c16b6
@@ -1200,6 +1341,12 @@ ScriptsOnlyBuild:
     className: GameVersionProperty
   - hash:
       serializedVersion: 2
+      Hash: 8216ca00094987954bcf22fd5ccf9bfd
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Cameras
+    className: FreeLookCam
+  - hash:
+      serializedVersion: 2
       Hash: c380fc5ce39348202e0a58fe3e243a74
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.PunBasics
@@ -1260,10 +1407,28 @@ ScriptsOnlyBuild:
     className: PlayerUI
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets._2D
+    className: Restarter
+  - hash:
+      serializedVersion: 2
+      Hash: 9a40de0f5a84ec02044ccfb05875df71
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Utility
+    className: WaypointCircuit
+  - hash:
+      serializedVersion: 2
       Hash: a8a4fba96bef6fccf7bb4be2f06c16b6
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit.Forms
     className: LoadLevelUIForm
+  - hash:
+      serializedVersion: 2
+      Hash: bc6aaf002a4761441b87b86f1467da2a
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Cameras
+    className: TargetFieldOfView
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1321,6 +1486,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets._2D
+    className: Platformer2DUserControl
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Procedural
     className: Cluster
@@ -1338,10 +1509,22 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 76b945b547f74d79302f337813e6c0be
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Characters.FirstPerson
+    className: RigidbodyFirstPersonController
+  - hash:
+      serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: Physics2DRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 74ef9834f798dfec27740a77366f605d
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Cameras
+    className: HandHeldCam
   - hash:
       serializedVersion: 2
       Hash: 28d790d202beb300ec2ffc6265160c26
@@ -1354,6 +1537,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: AppVersionProperty
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: 
+    className: AlphaButtonClickMask
   - hash:
       serializedVersion: 2
       Hash: ae1347d9113eee8b83c5c8047dcf31a8
@@ -1398,6 +1587,12 @@ ScriptsOnlyBuild:
     className: PropertyCell
   - hash:
       serializedVersion: 2
+      Hash: c933b2cffdb9d1429a103e9d63c523ef
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Utility
+    className: DynamicShadowSettings
+  - hash:
+      serializedVersion: 2
       Hash: cba6cca6bb3290c4c00d709cf63843db
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1426,6 +1621,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.PunBasics
     className: CameraWork
+  - hash:
+      serializedVersion: 2
+      Hash: 03b9ef2ed536e8d6280069f2195174da
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Utility
+    className: SimpleActivatorMenu
   - hash:
       serializedVersion: 2
       Hash: e10400e84c8c573b2b5e4088aca77453
@@ -1560,6 +1761,18 @@ ScriptsOnlyBuild:
     className: PlayerListView
   - hash:
       serializedVersion: 2
+      Hash: 0b231a1aaf227cddc6ebdb26fbc7afa4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SkeletonScript
+  - hash:
+      serializedVersion: 2
+      Hash: 49dcb3939f87870ac10cf1f8fcdfb35e
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Utility
+    className: FollowTarget
+  - hash:
+      serializedVersion: 2
       Hash: 6b343784257a2f09f8a92a7293aff61b
     assemblyName: Assembly-CSharp.dll
     namespaceName: PUNTutorial
@@ -1572,10 +1785,28 @@ ScriptsOnlyBuild:
     className: ProceduralController
   - hash:
       serializedVersion: 2
+      Hash: 74fdef42e5d1b91d250d09f9fc6f54da
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets._2D
+    className: Camera2DFollow
+  - hash:
+      serializedVersion: 2
+      Hash: 219ec6059796d8951d2adcd8505d0dc2
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.CrossPlatformInput
+    className: TouchPad
+  - hash:
+      serializedVersion: 2
       Hash: c5fd97cc10b89deaf7c60af66a6b0d5a
     assemblyName: PhotonRealtime.dll
     namespaceName: Photon.Realtime
     className: SupportLogger
+  - hash:
+      serializedVersion: 2
+      Hash: a8cd58c1680eb5251e5604e560cf89e9
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Utility
+    className: TimedObjectDestructor
   - hash:
       serializedVersion: 2
       Hash: 3f600ad0f750f59238a91f7513b927c1
@@ -1702,6 +1933,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ColorGradient
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets.Utility
+    className: FPSCounter
   - hash:
       serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
@@ -1836,6 +2073,12 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
+      Hash: 374efe038f78ba724b0dc8c7095b86bf
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Standard_Assets.Characters.ThirdPersonCharacter
+    className: PlayerController
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1890,6 +2133,12 @@ ScriptsOnlyBuild:
     className: UserIdUiForm
   - hash:
       serializedVersion: 2
+      Hash: 5e869f601eca6873b969dceef87d6303
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: UnityStandardAssets._2D
+    className: PlatformerCharacter2D
+  - hash:
+      serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1908,286 +2157,16 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MainMenu
-  - hash:
-      serializedVersion: 2
-      Hash: 0d85f4fda1e0e70cd92c084d12f05cdc
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Characters.ThirdPerson
-    className: AICharacterControl
-  - hash:
-      serializedVersion: 2
-      Hash: be8b29ecd05b56bbfb5cc0e39b16c11b
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Characters.FirstPerson
-    className: FirstPersonController
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: 
-    className: EventSystemChecker
-  - hash:
-      serializedVersion: 2
-      Hash: 352455aaadb8c98ff36ead557753abfa
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.CrossPlatformInput
-    className: TiltInput
-  - hash:
-      serializedVersion: 2
-      Hash: 1731d95cc8dce262956d345535456351
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Cameras
-    className: AutoCam
-  - hash:
-      serializedVersion: 2
-      Hash: e540a01426f9ad59088593bf72bcd255
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Utility
-    className: TimedObjectActivator
-  - hash:
-      serializedVersion: 2
-      Hash: 385666d964b0eabb4136cbb95125e502
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Cameras
-    className: ProtectCameraFromWallClip
-  - hash:
-      serializedVersion: 2
-      Hash: 303da015e9d1de9fdb27bbc2ba279ebd
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Utility
-    className: WaypointProgressTracker
-  - hash:
-      serializedVersion: 2
-      Hash: db1f205a8c9dae1c39098cd23fc97f63
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Utility
-    className: ParticleSystemDestroyer
-  - hash:
-      serializedVersion: 2
-      Hash: 22c018dd8fa228e66d586ea6215449b3
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Utility
-    className: SimpleMouseRotator
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Utility
-    className: DragRigidbody
-  - hash:
-      serializedVersion: 2
-      Hash: a8b6c919b2049fcc280823488144371f
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.CrossPlatformInput
-    className: Joystick
-  - hash:
-      serializedVersion: 2
-      Hash: 4f631fd718256a8c69483c396671a274
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Utility
-    className: PlatformSpecificContent
-  - hash:
-      serializedVersion: 2
-      Hash: 5e8a01a14cef8c5fb6866e39e13545df
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Characters.ThirdPerson
-    className: ThirdPersonCharacter
-  - hash:
-      serializedVersion: 2
-      Hash: 0574135745ea880aa1c1be2f2057ab89
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Utility
-    className: ActivateTrigger
-  - hash:
-      serializedVersion: 2
-      Hash: 4bd1cc3c85989d2213a9a8fd9d09e63f
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.CrossPlatformInput
-    className: InputAxisScrollbar
-  - hash:
-      serializedVersion: 2
-      Hash: fdd7177da17032ba94d98037cc97bb49
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.CrossPlatformInput
-    className: AxisTouchButton
-  - hash:
-      serializedVersion: 2
-      Hash: dc0c855440d59a516315a62ef55d7fd8
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets._2D
-    className: CameraFollow
-  - hash:
-      serializedVersion: 2
-      Hash: f03168bb2f3505e6cc0ba61aff5d31ab
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Cameras
-    className: LookatTarget
-  - hash:
-      serializedVersion: 2
-      Hash: c88c4199b288356ec3eb2f0d85abc619
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.CrossPlatformInput
-    className: ButtonHandler
-  - hash:
-      serializedVersion: 2
-      Hash: 0e0c7e6c34f2d19ba95cf463e39888b1
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Characters.FirstPerson
-    className: HeadBob
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Characters.ThirdPerson
-    className: ThirdPersonUserControl
-  - hash:
-      serializedVersion: 2
-      Hash: a4d879eed97e8d86fd752672fc026fa2
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Utility
-    className: AutoMoveAndRotate
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: 
-    className: ForcedReset
-  - hash:
-      serializedVersion: 2
-      Hash: f8bd7a92bf9f22d289759689ae7b1fd4
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Utility
-    className: SmoothFollow
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.CrossPlatformInput
-    className: MobileControlRig
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Utility
-    className: ObjectResetter
-  - hash:
-      serializedVersion: 2
-      Hash: 8216ca00094987954bcf22fd5ccf9bfd
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Cameras
-    className: FreeLookCam
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets._2D
-    className: Restarter
-  - hash:
-      serializedVersion: 2
-      Hash: 9a40de0f5a84ec02044ccfb05875df71
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Utility
-    className: WaypointCircuit
-  - hash:
-      serializedVersion: 2
-      Hash: bc6aaf002a4761441b87b86f1467da2a
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Cameras
-    className: TargetFieldOfView
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets._2D
-    className: Platformer2DUserControl
-  - hash:
-      serializedVersion: 2
-      Hash: 76b945b547f74d79302f337813e6c0be
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Characters.FirstPerson
-    className: RigidbodyFirstPersonController
-  - hash:
-      serializedVersion: 2
-      Hash: 74ef9834f798dfec27740a77366f605d
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Cameras
-    className: HandHeldCam
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: 
-    className: AlphaButtonClickMask
-  - hash:
-      serializedVersion: 2
-      Hash: c933b2cffdb9d1429a103e9d63c523ef
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Utility
-    className: DynamicShadowSettings
-  - hash:
-      serializedVersion: 2
-      Hash: 03b9ef2ed536e8d6280069f2195174da
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Utility
-    className: SimpleActivatorMenu
-  - hash:
-      serializedVersion: 2
-      Hash: 49dcb3939f87870ac10cf1f8fcdfb35e
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Utility
-    className: FollowTarget
-  - hash:
-      serializedVersion: 2
-      Hash: 74fdef42e5d1b91d250d09f9fc6f54da
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets._2D
-    className: Camera2DFollow
-  - hash:
-      serializedVersion: 2
-      Hash: 219ec6059796d8951d2adcd8505d0dc2
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.CrossPlatformInput
-    className: TouchPad
-  - hash:
-      serializedVersion: 2
-      Hash: a8cd58c1680eb5251e5604e560cf89e9
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Utility
-    className: TimedObjectDestructor
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets.Utility
-    className: FPSCounter
-  - hash:
-      serializedVersion: 2
-      Hash: 374efe038f78ba724b0dc8c7095b86bf
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Standard_Assets.Characters.ThirdPersonCharacter
-    className: PlayerController
-  - hash:
-      serializedVersion: 2
-      Hash: 5e869f601eca6873b969dceef87d6303
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: UnityStandardAssets._2D
-    className: PlatformerCharacter2D
-  - hash:
-      serializedVersion: 2
       Hash: 47cd05cf11ce8beb2fd9a1522f58f5ec
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMobileShaderSwitch
   - hash:
       serializedVersion: 2
-      Hash: 0b231a1aaf227cddc6ebdb26fbc7afa4
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: SkeletonScript
+    className: MainMenu
   platform: 5
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

@@ -9,10 +9,13 @@ public class GameGUI : MonoBehaviourPunCallbacks
 {
     static GameGUI instance;
     GameObject ui;
+
     [SerializeField]
     TextMeshProUGUI healthText;
+
     [SerializeField]
     TextMeshProUGUI scoreText;
+    
     [SerializeField]
     TextMeshProUGUI nameText;
  

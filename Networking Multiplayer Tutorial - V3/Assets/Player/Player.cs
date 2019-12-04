@@ -13,10 +13,10 @@ public class Player : MonoBehaviourPunCallbacks
     public PlayerShoot playerShoot { get; private set; }
     public PlayerHealth playerHealth { get; private set; }
     public Collider tankCollider { get; private set; }
+
+     public SkeletonScript Skeleton { get; private set; }
     
-    
-    
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +53,8 @@ public class Player : MonoBehaviourPunCallbacks
     void Awake() {
         DontDestroyOnLoad(gameObject);
         playerCamera = GetComponentInChildren<Camera>();
-        playerMovement = GetComponent<PlayerMovement>();
+        //playerMovement = GetComponent<PlayerMovement>();
+        Skeleton = GetComponent<SkeletonScript>();
         playerShoot = GetComponent<PlayerShoot>();
         playerHealth = GetComponent<PlayerHealth>();
         tankCollider = GetComponent<Collider>();

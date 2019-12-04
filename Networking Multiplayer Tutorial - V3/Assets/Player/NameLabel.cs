@@ -8,9 +8,10 @@ using UnityEngine;
     [RequireComponent(typeof(TextMeshProUGUI))]
     public class NameLabel : MonoBehaviour {
  
-       public void OnInstantiate(PhotonMessageInfo info)
+      void OnInstantiate(PhotonMessageInfo info)
         {
             var pView = GetComponentInParent<PhotonView>();
+
             if (pView.IsMine)
             {
                 gameObject.SetActive(false);

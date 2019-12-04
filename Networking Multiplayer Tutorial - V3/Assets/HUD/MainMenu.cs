@@ -12,7 +12,12 @@ public class MainMenu : MonoBehaviourPunCallbacks
     Button joinGameButton;
     TMP_InputField nicknameInputField;
 
-    public static string NickName => instance.nicknameInputField.text;
+    public static string NickName {
+         get 
+         { 
+             return instance.nicknameInputField.text; 
+         }
+    }
 
     static MainMenu instance;
     
@@ -47,10 +52,11 @@ public class MainMenu : MonoBehaviourPunCallbacks
         ui = transform.FindAnyChild<Transform>("UI").gameObject;
         joinGameButton = transform.FindAnyChild<Button>("JoinGame");
         
-        ui.SetActive(true);
+      
         joinGameButton.interactable = true;
+        ui.SetActive(true);
 
-        //nicknameInputField = transform.FindAnyChild<TMP_InputField>("NickName");
+        nicknameInputField = transform.FindAnyChild<TMP_InputField>("NameInputField(TMP)");
         nicknameInputField = GetComponentInChildren<TMP_InputField>();
         nicknameInputField.text = PlayerPrefs.GetString("NickName", "Player");
         

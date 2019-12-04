@@ -104,7 +104,7 @@ namespace PUNTutorial
         }
         
         [PunRPC]
-       public void RPC_ExplodeTank()
+        void RPC_ExplodeTank()
         {
             player.playerMovement.enabled = false;
             player.playerShoot.enabled = false;

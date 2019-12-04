@@ -25,7 +25,7 @@ public class PlayerShoot : MonoBehaviourPunCallbacks
     [PunRPC]
     void RPC_FireMissile(PhotonMessageInfo info)
     {
-        var missile = Instantiate(missilePrefab, transform.position, transform.rotation);
+        var missile = Instantiate(missilePrefab, firePos.position, transform.rotation);
         missile.SetOwner(info.photonView);
         missile.gameObject.SetActive(true);
     }
