@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class GameMan : MonoBehaviourPunCallbacks
 {
     GameObject defaultSpawnPoint;
+
+    Animator animatorPlayer;
     public static GameMan Instance;
     public static GameObject localPlayer;
     // Start is called before the first frame update
@@ -66,6 +68,10 @@ public class GameMan : MonoBehaviourPunCallbacks
             "skeleton_animated Variant",
             spawnPoint.position,
             spawnPoint.rotation, 0);
+            
+            localPlayer.transform.parent = transform;
+
+            animatorPlayer = localPlayer.GetComponent<Animator>();
     }
     
     void OnEnable()

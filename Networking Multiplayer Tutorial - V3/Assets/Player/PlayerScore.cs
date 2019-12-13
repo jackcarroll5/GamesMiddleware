@@ -8,7 +8,7 @@ using UnityEngine;
         int score;
 
         [PunRPC]
-        void RPC_AddScore(int amount)
+       public void RPC_AddScore(int amount)
         {
             score += amount;
             
@@ -16,6 +16,7 @@ using UnityEngine;
             {
                 GameGUI.SetScore(score);
             }
+            
             Debug.Log("Score: " + score);
         }
     } 

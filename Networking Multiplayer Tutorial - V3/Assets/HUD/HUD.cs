@@ -6,16 +6,13 @@ using UnityEngine.UI;
 public class HUD : MonoBehaviour
 {
     static HUD instance;
-    
-    
+     
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
- 
- 
     void Awake () 
     {
         if(instance != null)

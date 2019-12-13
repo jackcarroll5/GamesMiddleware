@@ -31,12 +31,12 @@ public class MainMenu : MonoBehaviourPunCallbacks
         ui.SetActive(!PhotonNetwork.InRoom);
     }
     
-    void OnEnable()
+    public override void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    void OnDisable()
+    public override void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
@@ -56,7 +56,7 @@ public class MainMenu : MonoBehaviourPunCallbacks
         joinGameButton.interactable = true;
         ui.SetActive(true);
 
-        nicknameInputField = transform.FindAnyChild<TMP_InputField>("NameInputField(TMP)");
+        //nicknameInputField = transform.FindAnyChild<TMP_InputField>("NameInputField(TMP)");
         nicknameInputField = GetComponentInChildren<TMP_InputField>();
         nicknameInputField.text = PlayerPrefs.GetString("NickName", "Player");
         

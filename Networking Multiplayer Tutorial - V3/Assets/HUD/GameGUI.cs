@@ -30,12 +30,12 @@ public class GameGUI : MonoBehaviourPunCallbacks
         ui = transform.FindAnyChild<Transform>("UI").gameObject;
     }
  
-    void OnEnable()
+    public override void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
  
-    void OnDisable()
+   public override void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
@@ -63,7 +63,7 @@ public class GameGUI : MonoBehaviourPunCallbacks
             .ToString();
     }
  
-    string GetHealthString(float normalisedHPPercent)
+    public string GetHealthString(float normalisedHPPercent)
     {
         return new System.Text.StringBuilder()
             .Append("Health: ")

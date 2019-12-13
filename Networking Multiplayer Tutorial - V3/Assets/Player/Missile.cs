@@ -10,7 +10,7 @@ public class Missile : MonoBehaviour
     [SerializeField] ParticleSystem explosion;
     [SerializeField] Rigidbody rbody;
     public int damage = 10;
-    float speed = 60f;
+    float speed = 65f;
     public PlayerShoot MissileOwner { get; private set; }
  
     void FixedUpdate()

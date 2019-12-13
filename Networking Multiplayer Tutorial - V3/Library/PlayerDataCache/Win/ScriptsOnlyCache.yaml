@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Billboard
     - GameGUI
     - GameMan
     - HUD
@@ -25,9 +26,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
-    PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PhotonTransformViewEditor
-    - Photon.Pun.PhotonViewInspector
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -159,6 +157,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9832}
     - Class: 114
+      Script: {instanceID: 9870}
+    - Class: 114
       Script: {instanceID: 9992}
     - Class: 114
       Script: {instanceID: 10014}
@@ -242,6 +242,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12226}
     - Class: 114
       Script: {instanceID: 12278}
+    - Class: 114
+      Script: {instanceID: 16812}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124

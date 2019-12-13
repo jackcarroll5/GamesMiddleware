@@ -9636,8 +9636,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d03af4a5376136f42a580dc614c93efd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trail: {fileID: 19895962, guid: b56ddd68949f6ba49bb598a37ab663cf, type: 3}
-  explosion: {fileID: 19807510, guid: a1465c0c0ba41e743a875887654808c8, type: 3}
+  trail: {fileID: 198917026431072054}
+  explosion: {fileID: 198013807743635502}
   rbody: {fileID: 54698503742231832}
   damage: 10
 --- !u!54 &54698503742231832

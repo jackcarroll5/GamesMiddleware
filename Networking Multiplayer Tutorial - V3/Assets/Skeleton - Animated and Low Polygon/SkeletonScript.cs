@@ -1,9 +1,11 @@
 ﻿
 using System;
+using Photon.Pun;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class SkeletonScript : MonoBehaviour
+public class SkeletonScript : MonoBehaviourPunCallbacks
 {
     private Animator _thisAnimation;
     private Rigidbody _rigidBody;
@@ -27,6 +29,7 @@ public class SkeletonScript : MonoBehaviour
     Vector3 m_CapsuleCenter = new Vector3(0,0.12567f,0);
     bool _isGrounded;
 
+
     private static readonly int Speed = Animator.StringToHash("Speed");
     private static readonly int TurnSpeed = Animator.StringToHash("TurnSpeed");
     private static readonly int Jump = Animator.StringToHash("Jump");
@@ -44,6 +47,10 @@ public class SkeletonScript : MonoBehaviour
     
     [Range(0.0f,1.0f)]
     float timeValue = 0.5f;
+
+    float vert;
+
+    float horizontal;
     
     // Start is called before the first frame update
     void Start()
@@ -57,9 +64,20 @@ public class SkeletonScript : MonoBehaviour
         m_CapsuleHeight = _mCapsule.height;
         m_CapsuleCenter = _mCapsule.center;
 
+
         //initRotation = head.rotation;
         //head.LookAt(target.position);
         //targetRot = head.rotation;
+    }
+
+     private void Awake ()
+    {
+       _rigidBody = GetComponent<Rigidbody> ();
+ 
+        if(!photonView.IsMine)
+        {
+            enabled = false;
+        }
     }
 
     private void LateUpdate()
@@ -138,6 +156,8 @@ public class SkeletonScript : MonoBehaviour
         }
     }
 
+    
+
     void PreventStandingInLowHeadroom()
     {
         // prevent standing up in crouch-only zones
@@ -156,24 +176,30 @@ public class SkeletonScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       if(photonView.IsMine)
+       {
+       
+
         target = GameObject.FindGameObjectWithTag("Target").transform;
         Debug.Log(target.name); 
-        
-        var vert = Input.GetAxis("Vertical");
+
+         vert = Input.GetAxis("Vertical");
         _thisAnimation.SetFloat(Speed, vert);
         
         var transform1 = transform;
         transform1.position += 0.3f * vert * transform1.forward;
         
-        var horizontal = Input.GetAxis("Horizontal");
+         horizontal = Input.GetAxis("Horizontal");
         _thisAnimation.SetFloat(TurnSpeed, horizontal);
+        
         
         
         // help the character turn faster (this is in addition to root rotation in the animation)
         float turnSpeed = Mathf.Lerp(stationaryTurnSpeed, movingTurnSpeed, forwardAmount);
         transform.Rotate(0, horizontal * turnSpeed * Time.deltaTime, 0);
+       
         
-        
+
         if(Input.GetButtonDown("Jump"))
         {
             _rigidBody.AddForce(Vector3.up * jumpingForce);
@@ -189,8 +215,6 @@ public class SkeletonScript : MonoBehaviour
         {
             _thisAnimation.SetBool(Grounded, false);
         }
-
-       
         
         float runCycle =
             Mathf.Repeat(
@@ -201,6 +225,7 @@ public class SkeletonScript : MonoBehaviour
         if (_thisAnimation.GetBool(Grounded))
         {
             _thisAnimation.SetFloat("JumpLeg", jumpLeg);
+            //avatar._thisAnimation.SetFloat("JumpLeg", jumpLeg)
         }
         
         if(Input.GetKeyDown((KeyCode.L)))
@@ -219,11 +244,27 @@ public class SkeletonScript : MonoBehaviour
         }
         
         ScaleCapsuleForCrouching(m_Crouching);
-        PreventStandingInLowHeadroom();
-        
-        
-        
-        
-       
+        PreventStandingInLowHeadroom(); 
+
+          }      
     }
+
+    void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+
+        if (stream.IsWriting)
+        {
+            stream.SendNext(horizontal);
+            stream.SendNext(vert);
+            //Another example of what you can send
+            stream.SendNext(transform.position);
+        }
+        else
+        {
+            horizontal = (float)stream.ReceiveNext();
+            vert = (float)stream.ReceiveNext();
+            //Another example of what you can receive
+            Vector3 position = (Vector3)stream.ReceiveNext();
+        }
+  }
 }

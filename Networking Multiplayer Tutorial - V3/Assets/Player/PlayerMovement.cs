@@ -22,9 +22,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
             enabled = false;
         }
     }
- 
- 
-    private void OnEnable ()
+   private void OnEnable ()
     {
         // When the tank is turned on, make sure it's not kinematic.
         m_Rigidbody.isKinematic = false;
@@ -35,7 +33,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     }
  
  
-    private void OnDisable ()
+     private void OnDisable ()
     {
         // When the tank is turned off, set it to kinematic so it stops moving.
         m_Rigidbody.isKinematic = true;

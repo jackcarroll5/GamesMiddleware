@@ -4,8 +4,7 @@ using Photon.Pun;
 using UnityEngine;
 
 public class PlayerShoot : MonoBehaviourPunCallbacks
-{
-    
+{ 
     [SerializeField] Missile missilePrefab;
     [SerializeField] Transform firePos;
     float nextFireTime;

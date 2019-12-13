@@ -55,7 +55,7 @@ namespace PUNTutorial
         }
         
         
-        void DisplayHealth()
+       public void DisplayHealth()
         {
             healthBar.SetHealthBarValue(GetNormalisedHealthPercent(hitPoints));
             if (photonView.IsMine)
@@ -67,9 +67,11 @@ namespace PUNTutorial
         public void OnPhotonPlayerPropertiesChanged(object[] playerAndUpdatedProps)
         {
             var plyr = (Photon.Realtime.Player) playerAndUpdatedProps[0];
+
             if (plyr.ActorNumber == photonView.OwnerActorNr)
             {
                 var props = (ExitGames.Client.Photon.Hashtable) playerAndUpdatedProps[1];
+
                 if (props.ContainsKey("HP"))
                     DisplayHealth();
             }
@@ -82,7 +84,7 @@ namespace PUNTutorial
         }
         
         [PunRPC]
-       void RPC_RespawnTank(short[] respawnPos, short rot)
+       public void RPC_RespawnTank(short[] respawnPos, short rot)
         {
             if(photonView.IsMine)
             {
@@ -104,11 +106,12 @@ namespace PUNTutorial
         }
         
         [PunRPC]
-        void RPC_ExplodeTank()
+       public void RPC_ExplodeTank()
         {
             player.playerMovement.enabled = false;
             player.playerShoot.enabled = false;
             player.tankCollider.enabled = false;
+            
             transform.GetChild(0).gameObject.SetActive(false);
             Instantiate(tankExploderPrefab, transform.position, transform.rotation);
         }
@@ -116,6 +119,8 @@ namespace PUNTutorial
         public void DoDamage(Missile missile)
         {
             hitPoints = Mathf.Clamp(hitPoints - missile.damage, 0 , MAX_HP);
+            Debug.Log(GetHealthString());
+
             if (hitPoints == 0)
             {
                 missile.MissileOwner.photonView.RPC("RPC_AddScore", missile.MissileOwner.photonView.Owner, 1);
