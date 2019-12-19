@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Geolocation_Emerging_Tech_Test.Models
 {
-    public class WeatherGeolocation
+    public static class WeatherGeolocation
     {
         public static string GetIPRequest(IHttpContextAccessor httpConAccessor, bool attemptUsingXForwardHeader = true)
         {

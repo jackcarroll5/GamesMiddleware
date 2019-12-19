@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Geolocation_Emerging_Tech_Test.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.Extensions.DependencyInjection;
 using FreeGeoIPCore;
 using MetOfficeDataPoint;
 using MetOfficeDataPoint.Models;
@@ -15,17 +17,17 @@ using MetOfficeDataPoint.Models.GeoCoordinate;
 
 namespace Geolocation_Emerging_Tech_Test.Controllers
 {
+    //[Route("Controllers/[controller]")]
     public class HomeController : Controller
     {
         private readonly IHttpContextAccessor _httpConAccessor;
         private readonly IConfiguration _con;
 
-
-
         public HomeController(IConfiguration conf, IHttpContextAccessor httpConAccessor)
         {
             _con = conf;
             _httpConAccessor = httpConAccessor;
+
         }
 
 

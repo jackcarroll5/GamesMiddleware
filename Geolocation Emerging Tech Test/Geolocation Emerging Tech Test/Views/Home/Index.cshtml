@@ -6,6 +6,23 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 
+    <div class="row">
+     <button id="locButton" type="button" class="btn btn-default"
+             onclick="getGeoPosition()">Use Current Position</button>
+    </div>
 
+    <script type="text/javascript">
+        function useGeoPosition(pos) {
+            window.location.replace('?Longitude = ' + pos);
+        };
+
+        function getGeoPosition() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(useGeoPosition);
+            }
+        };
+
+
+    </script>
 
 </div>
