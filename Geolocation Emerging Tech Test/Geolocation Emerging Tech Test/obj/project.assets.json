@@ -2,6 +2,33 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "FreeGeoIPCore/1.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.6/FreeGeoIPCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/FreeGeoIPCore.dll": {}
+        }
+      },
+      "MetOfficeDataPoint/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/netstandard1.6/MetOfficeDataPoint.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/MetOfficeDataPoint.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -2724,7 +2751,7 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -4442,6 +4469,31 @@
     }
   },
   "libraries": {
+    "FreeGeoIPCore/1.0.3": {
+      "sha512": "A6eOskUtz+MJFLBINxnlEUcb4FZAlMx6dCtttvjlmTDlgA6twbiTPRrEvK6tjTkK2Gvx+ILXH+dVBMHWQ9crwg==",
+      "type": "package",
+      "path": "freegeoipcore/1.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "freegeoipcore.1.0.3.nupkg.sha512",
+        "freegeoipcore.nuspec",
+        "lib/netstandard1.6/FreeGeoIPCore.dll"
+      ]
+    },
+    "MetOfficeDataPoint/2.1.0": {
+      "sha512": "9sbfVEhWBXvlDXTn3iUvymTaaqbnMcC/n37I+11aSFhXiHj/xqBe2jNcvcGKACYSg84UBqNfEEh8KK0gFvSVeg==",
+      "type": "package",
+      "path": "metofficedatapoint/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/MetOfficeDataPoint.dll",
+        "lib/netstandard1.6/MetOfficeDataPoint.dll",
+        "metofficedatapoint.2.1.0.nupkg.sha512",
+        "metofficedatapoint.nuspec"
+      ]
+    },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "sha512": "91JMnE9zdIDphG00qgRvl8ZwKEjqAbNlJdfXUoMiIWPfpYyH7fyCsTSj6/aynRdw/Qr/K70xC7QC6MOJ1vFBJQ==",
       "type": "package",
@@ -7335,10 +7387,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/11.0.2": {
-      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
-      "path": "newtonsoft.json/11.0.2",
+      "path": "newtonsoft.json/12.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7361,8 +7413,9 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.11.0.2.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "Newtonsoft.Json.Bson/1.0.1": {
@@ -12128,6 +12181,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "FreeGeoIPCore >= 1.0.3",
+      "MetOfficeDataPoint >= 2.1.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0"
@@ -12174,6 +12229,14 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
+          "FreeGeoIPCore": {
+            "target": "Package",
+            "version": "[1.0.3, )"
+          },
+          "MetOfficeDataPoint": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "b36818a78e1460eed609d6d51b385bb3652a4f45"
+    "signature": "4968a4533e357c5f2c4472de1df0a1349c675963"
   },
   "compilationOptions": {
     "defines": [
@@ -24,6 +24,8 @@
     ".NETCoreApp,Version=v2.2": {
       "Geolocation Emerging Tech Test/1.0.0": {
         "dependencies": {
+          "FreeGeoIPCore": "1.0.3",
+          "FreeGeoIp": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0"
@@ -33,6 +35,33 @@
         },
         "compile": {
           "Geolocation Emerging Tech Test.dll": {}
+        }
+      },
+      "FreeGeoIp/1.0.0": {
+        "runtime": {
+          "lib/net451/FreeGeoIp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/net451/FreeGeoIp.dll": {}
+        }
+      },
+      "FreeGeoIPCore/1.0.3": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "NETStandard.Library": "2.0.3",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard1.6/FreeGeoIPCore.dll": {
+            "assemblyVersion": "1.0.3.0",
+            "fileVersion": "1.0.3.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.6/FreeGeoIPCore.dll": {}
         }
       },
       "Microsoft.NETCore.App/2.2.0": {
@@ -3226,6 +3255,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "FreeGeoIp/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WWMN9GAtgibMr2Ql2Y7Bt+ea0vb0I1/z36dVpyuRN7SB7pQ8hU84mh+NkqNAyLVVchW2uu4GaTF0DqcyQn3ekA==",
+      "path": "freegeoip/1.0.0",
+      "hashPath": "freegeoip.1.0.0.nupkg.sha512"
+    },
+    "FreeGeoIPCore/1.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-A6eOskUtz+MJFLBINxnlEUcb4FZAlMx6dCtttvjlmTDlgA6twbiTPRrEvK6tjTkK2Gvx+ILXH+dVBMHWQ9crwg==",
+      "path": "freegeoipcore/1.0.3",
+      "hashPath": "freegeoipcore.1.0.3.nupkg.sha512"
     },
     "Microsoft.NETCore.App/2.2.0": {
       "type": "package",
