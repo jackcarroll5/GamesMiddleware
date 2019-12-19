@@ -5,14 +5,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using GeolocationGamesMiddlewareEmergingTech.Models;
+using Microsoft.AspNetCore.Hosting;
+using MaxMind.GeoIP2;
+using Microsoft.Extensions.Logging;
 
 namespace GeolocationGamesMiddlewareEmergingTech.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly IHostingEnvironment _hostEnvironment;
+
+        public HomeController(IHostingEnvironment hostEnvironment)
         {
-            return View();
+            _hostEnvironment = hostEnvironment;
         }
 
         public IActionResult Privacy()
@@ -20,10 +25,16 @@ namespace GeolocationGamesMiddlewareEmergingTech.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Index()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+            using (var readerData = new DatabaseReader(_hostEnvironment.ContentRootPath + "\\GeoLite2-City.mmdb"))
+            {
+                var ipAdd = HttpContext.Connection.RemoteIpAddress;
+
+                var cityLocation = readerData.City(ipAdd);
+
+                return View(cityLocation);
+            }                     
+        }    
     }
 }
