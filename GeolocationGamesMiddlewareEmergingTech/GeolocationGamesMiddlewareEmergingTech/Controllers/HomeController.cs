@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 namespace GeolocationGamesMiddlewareEmergingTech.Controllers
 {
     public class HomeController : Controller
+    /*Reference - Following tutorial for the geolocation to get the location based on an IP address but this developer is creating it in the style of ASP.Net Core using the MVC controller. - https://www.jerriepelser.com/blog/aspnetcore-geo-location-from-ip-address/ */
     {
         private readonly IHostingEnvironment _hostEnvironment;
 

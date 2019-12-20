@@ -38,6 +38,7 @@ namespace GeolocationGamesMiddlewareEmergingTech
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /*Reference - Using the ModHeader extension on Chrome to put in different IP addresses for the X-Forwarded-For Request headers. This code shows off the code for inputting the X-Forwarded-Header as well as the IP address that can be modifieed in that request header in the Modheader extension of Google Chrome once the extension is installed from the Chrome Web Store- https://www.jerriepelser.com/blog/aspnetcore-geo-location-from-ip-address/*/
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory logFactory)
         {
             if (env.IsDevelopment())
